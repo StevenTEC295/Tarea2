@@ -174,68 +174,44 @@ namespace Tarea2
         }
 
         // Método para mezclar dos listas ordenadas
-        public ListaDoble MergeSorted(ListaDoble listA, ListaDoble listB, SortDirection direction)
+        public void MergeSorted(IList listA, IList listB, SortDirection direction)
         {
+            if (listA == null || listB == null)
+                throw new InvalidOperationException("Una o ambas listas son nulas.");
+            // Implementar lógica de mezcla aquí (combinar listA y listB en la dirección indicada)
+            Nodo currentA = ((ListaDoble)listA).cabeza;//acceder a la cabeza de listA
+            Nodo currentB = ((ListaDoble)listB).cabeza;//acceder a la cabeza de listB
+
             ListaDoble mergedList = new ListaDoble();
-            Nodo currentA = listA.cabeza;
-            Nodo currentB = listB.cabeza;
-
-            if (direction == SortDirection.Ascendente)
+            // Lógica para fusionar en orden ascendente
+            while (currentA != null || currentB != null)
             {
-                while (currentA != null && currentB != null)
+                if (currentA == null) // Si lista A está vacía
                 {
-                    if (currentA.Valor <= currentB.Valor)
-                    {
-                        mergedList.AddLast(currentA.Valor);
-                        currentA = currentA.Siguiente;
-                    }
-                    else
-                    {
-                        mergedList.AddLast(currentB.Valor);
-                        currentB = currentB.Siguiente;
-                    }
+                    mergedList.InsertInOrder(currentB!.Valor);
+                    currentB = currentB.Siguiente;
                 }
-            }
-            else // Descendente
-            {
-                while (currentA != null && currentB != null)
+                else if (currentB == null || (direction == SortDirection.Ascendente && currentA.Valor <= currentB.Valor) ||
+                        (direction == SortDirection.Descendente && currentA.Valor >= currentB.Valor))
                 {
-                    if (currentA.Valor >= currentB.Valor)
-                    {
-                        mergedList.AddLast(currentA.Valor);
-                        currentA = currentA.Siguiente;
-                    }
-                    else
-                    {
-                        mergedList.AddLast(currentB.Valor);
-                        currentB = currentB.Siguiente;
-                    }
+                    mergedList.InsertInOrder(currentA!.Valor);
+                    currentA = currentA.Siguiente;
+                }
+                else
+                {
+                    mergedList.InsertInOrder(currentB!.Valor);
+                    currentB = currentB.Siguiente;
                 }
             }
 
-            // Si quedan elementos en la lista A
-            while (currentA != null)
-            {
-                mergedList.AddLast(currentA.Valor);
-                currentA = currentA.Siguiente;
-            }
-
-            // Si quedan elementos en la lista B
-            while (currentB != null)
-            {
-                mergedList.AddLast(currentB.Valor);
-                currentB = currentB.Siguiente;
-            }
-
-            if (direction == SortDirection.Descendente)
-            {
-                // Invertir la lista resultante si es descendente
-                mergedList = Reverse(mergedList);
-            }
-
-            return mergedList;
+            // Actualiza listA con la lista fusionada
+            ((ListaDoble)listA).cabeza = mergedList.cabeza;
+            ((ListaDoble)listA).cola = mergedList.cola;
+            ((ListaDoble)listA).tamaño = mergedList.tamaño;
+            ((ListaDoble)listA).ActualizarMedio(); // Actualiza nodo central
         }
-        // Método auxiliar para invertir la lista
+
+       /* // Método auxiliar para invertir la lista
         private static ListaDoble Reverse(ListaDoble list)
         {
             ListaDoble reversedList = new ListaDoble();
@@ -246,7 +222,7 @@ namespace Tarea2
                 current = current.Anterior;
             }
             return reversedList;
-        }
+        }*/
         // Método para invertir la lista
         public void Invert()
         {

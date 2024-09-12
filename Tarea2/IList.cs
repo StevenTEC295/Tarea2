@@ -14,7 +14,7 @@ namespace Tarea2
         int DeleteLast();
         bool DeleteValue(int value);
         int GetMiddle();
-        ListaDoble MergeSorted(ListaDoble listA, ListaDoble listB, SortDirection direction);
+        void MergeSorted(IList listA, IList listB, SortDirection direction);
     }
 
 }

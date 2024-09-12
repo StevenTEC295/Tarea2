@@ -1002,11 +1002,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\steve\\source\\repos\\Tarea2\\Tarea2\\Tarea2.csproj",
+      "projectUniqueName": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\Tarea2.csproj",
       "projectName": "Tarea2",
-      "projectPath": "C:\\Users\\steve\\source\\repos\\Tarea2\\Tarea2\\Tarea2.csproj",
+      "projectPath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\Tarea2.csproj",
       "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\steve\\source\\repos\\Tarea2\\Tarea2\\obj\\",
+      "outputPath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config",

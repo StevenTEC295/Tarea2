@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2905D0AF-1F09-48F1-8B19-64BFABF7DC93}|Tarea2\\Tarea2.csproj|c:\\users\\steve\\onedrive - estudiantes itcr\\tec\\ii semestre\\algoritmos y estructuras de datos 1\\tareas\\algoritmos de ordenamiento\\pruebasunitariastarea\\tarea2\\tarea2\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2905D0AF-1F09-48F1-8B19-64BFABF7DC93}|Tarea2\\Tarea2.csproj|solutionrelative:tarea2\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2905D0AF-1F09-48F1-8B19-64BFABF7DC93}|Tarea2\\Tarea2.csproj|c:\\users\\steve\\onedrive - estudiantes itcr\\tec\\ii semestre\\algoritmos y estructuras de datos 1\\tareas\\algoritmos de ordenamiento\\pruebasunitariastarea\\tarea2\\tarea2\\listadoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2905D0AF-1F09-48F1-8B19-64BFABF7DC93}|Tarea2\\Tarea2.csproj|solutionrelative:tarea2\\listadoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2905D0AF-1F09-48F1-8B19-64BFABF7DC93}|Tarea2\\Tarea2.csproj|c:\\users\\steve\\onedrive - estudiantes itcr\\tec\\ii semestre\\algoritmos y estructuras de datos 1\\tareas\\algoritmos de ordenamiento\\pruebasunitariastarea\\tarea2\\tarea2\\ilist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2905D0AF-1F09-48F1-8B19-64BFABF7DC93}|Tarea2\\Tarea2.csproj|solutionrelative:tarea2\\ilist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Tarea2\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\UnitTest1.cs",
+              "RelativeToolTip": "Tarea2\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T19:15:02.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IList.cs",
+              "DocumentMoniker": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\IList.cs",
+              "RelativeDocumentMoniker": "Tarea2\\IList.cs",
+              "ToolTip": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\IList.cs",
+              "RelativeToolTip": "Tarea2\\IList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T19:14:36.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListaDoble.cs",
+              "DocumentMoniker": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\ListaDoble.cs",
+              "RelativeDocumentMoniker": "Tarea2\\ListaDoble.cs",
+              "ToolTip": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\ListaDoble.cs",
+              "RelativeToolTip": "Tarea2\\ListaDoble.cs",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAcwLoAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T19:12:28.221Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
