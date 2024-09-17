@@ -7,25 +7,27 @@ using System.Xml.Linq;
 using Tarea2;
 
 namespace Tarea2
+
 {
+    public class Nodo
+    {
+        public int Valor { get; set; }
+        public Nodo Siguiente { get; set; }
+        public Nodo Anterior { get; set; }
+
+        public Nodo(int valor)
+        {
+            Valor = valor;
+        }
+    }
     public class ListaDoble : IList
     {
-        private class Nodo
-        {
-            public int Valor { get; set; }
-            public Nodo Siguiente { get; set; }
-            public Nodo Anterior { get; set; }
+        
 
-            public Nodo(int valor)
-            {
-                Valor = valor;
-            }
-        }
-
-        private Nodo cabeza;
-        private Nodo cola;
-        private Nodo medio;  // Referencia para manejar el nodo central
-        private int tamaño;  // Contador de nodos
+        public Nodo cabeza;
+        public Nodo cola;
+        public Nodo medio;  // Referencia para manejar el nodo central
+        public int tamaño;  // Contador de nodos
 
         public ListaDoble()
         {
@@ -174,55 +176,90 @@ namespace Tarea2
         }
 
         // Método para mezclar dos listas ordenadas
-        public void MergeSorted(IList listA, IList listB, SortDirection direction)
+        public ListaDoble MergeSorted(ListaDoble listA, ListaDoble listB, SortDirection direction)
         {
-            if (listA == null || listB == null)
-                throw new InvalidOperationException("Una o ambas listas son nulas.");
-            // Implementar lógica de mezcla aquí (combinar listA y listB en la dirección indicada)
-            Nodo currentA = ((ListaDoble)listA).cabeza;//acceder a la cabeza de listA
-            Nodo currentB = ((ListaDoble)listB).cabeza;//acceder a la cabeza de listB
-
-            ListaDoble mergedList = new ListaDoble();
-            // Lógica para fusionar en orden ascendente
-            while (currentA != null || currentB != null)
+            ListaDoble result = new ListaDoble();
+            if (listA.tamaño<0 || listB.tamaño<0) 
+            
             {
-                if (currentA == null) // Si lista A está vacía
+                
+
+                Nodo currentA = listA.cabeza;
+                Nodo currentB = listB.cabeza;
+
+                // Fusionar en orden ascendente
+                if (direction == SortDirection.Ascendente)
                 {
-                    mergedList.InsertInOrder(currentB!.Valor);
-                    currentB = currentB.Siguiente;
+                    while (currentA != null && currentB != null)
+                    {
+                        if (currentA.Valor <= currentB.Valor)
+                        {
+                            result.AddLast(currentA.Valor);
+                            currentA = currentA.Siguiente;
+                        }
+                        else
+                        {
+                            result.AddLast(currentB.Valor);
+                            currentB = currentB.Siguiente;
+                        }
+                    }
                 }
-                else if (currentB == null || (direction == SortDirection.Ascendente && currentA.Valor <= currentB.Valor) ||
-                        (direction == SortDirection.Descendente && currentA.Valor >= currentB.Valor))
+                // Fusionar en orden descendente
+                else if (direction == SortDirection.Descendente)
                 {
-                    mergedList.InsertInOrder(currentA!.Valor);
+                    while (currentA != null && currentB != null)
+                    {
+                        if (currentA.Valor >= currentB.Valor)
+                        {
+                            result.AddLast(currentA.Valor);
+                            currentA = currentA.Siguiente;
+                        }
+                        else
+                        {
+                            result.AddLast(currentB.Valor);
+                            currentB = currentB.Siguiente;
+                        }
+                    }
+                }
+
+                // Si quedan elementos en listA
+                while (currentA != null)
+                {
+                    result.AddLast(currentA.Valor);
                     currentA = currentA.Siguiente;
                 }
-                else
+
+                // Si quedan elementos en listB
+                while (currentB != null)
                 {
-                    mergedList.InsertInOrder(currentB!.Valor);
+                    result.AddLast(currentB.Valor);
                     currentB = currentB.Siguiente;
                 }
-            }
+                return result;
 
-            // Actualiza listA con la lista fusionada
-            ((ListaDoble)listA).cabeza = mergedList.cabeza;
-            ((ListaDoble)listA).cola = mergedList.cola;
-            ((ListaDoble)listA).tamaño = mergedList.tamaño;
-            ((ListaDoble)listA).ActualizarMedio(); // Actualiza nodo central
+
+            }
+            
+            return result;
+            
+
+
         }
+            
 
-       /* // Método auxiliar para invertir la lista
-        private static ListaDoble Reverse(ListaDoble list)
-        {
-            ListaDoble reversedList = new ListaDoble();
-            Nodo current = list.cola;
-            while (current != null)
-            {
-                reversedList.AddLast(current.Valor);
-                current = current.Anterior;
-            }
-            return reversedList;
-        }*/
+
+        /* // Método auxiliar para invertir la lista
+         private static ListaDoble Reverse(ListaDoble list)
+         {
+             ListaDoble reversedList = new ListaDoble();
+             Nodo current = list.cola;
+             while (current != null)
+             {
+                 reversedList.AddLast(current.Valor);
+                 current = current.Anterior;
+             }
+             return reversedList;
+         }*/
         // Método para invertir la lista
         public void Invert()
         {

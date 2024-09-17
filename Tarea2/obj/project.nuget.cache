@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tPad+yHIVtM=",
+  "dgSpecHash": "3G6mOzBoCZs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\Tarea2.csproj",
+  "projectFilePath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\Tarea2\\Tarea2\\Tarea2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\steve\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\steve\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

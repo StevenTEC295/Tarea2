@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\Tarea2.csproj": {}
+    "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\Tarea2\\Tarea2\\Tarea2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\Tarea2.csproj": {
+    "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\Tarea2\\Tarea2\\Tarea2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\Tarea2.csproj",
+        "projectUniqueName": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\Tarea2\\Tarea2\\Tarea2.csproj",
         "projectName": "Tarea2",
-        "projectPath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\Tarea2.csproj",
+        "projectPath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\Tarea2\\Tarea2\\Tarea2.csproj",
         "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\PruebasUnitariasTarea\\Tarea2\\Tarea2\\obj\\",
+        "outputPath": "C:\\Users\\steve\\OneDrive - Estudiantes ITCR\\TEC\\II Semestre\\Algoritmos y Estructuras de Datos 1\\Tareas\\Algoritmos de Ordenamiento\\Tarea2\\Tarea2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

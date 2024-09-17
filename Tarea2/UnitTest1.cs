@@ -10,7 +10,7 @@ namespace Tarea2
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void GetMiddle_ListaVacia_DebeLanzarExcepcion()
+        public void GetMiddle_ListaVacia()
         {
             // Arrange
             var lista = new ListaDoble();
@@ -18,23 +18,93 @@ namespace Tarea2
             // Act & Assert
             lista.GetMiddle(); // Debe lanzar una excepción porque la lista está vacía
         }
-
         [TestMethod]
-        public void Invert_InvierteLaListaCorrectamente()
+        [ExpectedException(typeof(NullReferenceException))]
+        public void GetMiddle_ListaNula()
         {
             // Arrange
-            var lista = new ListaDoble();
+            ListaDoble lista = null;
+
+            // Act & Assert
+            lista.GetMiddle();
+        }
+
+        [TestMethod]
+
+        public void GetMiddle_Correcto()
+        {
+            // Arrange
+            ListaDoble lista = new ListaDoble();
+            lista.InsertInOrder(1);
+            // Act & Assert
+            Assert.AreEqual(1, lista.GetMiddle());
+        }
+        [TestMethod]
+        public void GetMiddle_Correcto2()
+        {
+            // Arrange
+            ListaDoble lista = new ListaDoble();
             lista.InsertInOrder(1);
             lista.InsertInOrder(2);
-            lista.InsertInOrder(3);
+            // Act & Assert
+            Assert.AreEqual(2, lista.GetMiddle());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void InvertNull()
+        {
+            // Arrange
+            ListaDoble lista = null;
 
             // Act
             lista.Invert();
 
-            // Assert
-            Assert.AreEqual(2, lista.GetMiddle(), "Después de invertir, el valor medio debería ser 2");
+            
+        }
+        [TestMethod]
+        public void InvertVacia()
+        {
+            // Arrange
+            ListaDoble lista = new ListaDoble();
+
+            // Act
+            lista.Invert();
+
+            Assert.AreEqual(0, lista.tamaño);
+
         }
 
+        [TestMethod]
+        public void InvertCorrecto()
+        {
+            // Arrange
+            ListaDoble lista = new ListaDoble();
+            lista.AddLast(1);
+            lista.AddLast(0);
+            lista.AddLast(30);
+            lista.AddLast(50);
+            lista.AddLast(2);
+            // Act
+            lista.Invert();
+
+            Assert.AreEqual(2, lista.cabeza.Valor);
+
+        }
+
+        [TestMethod]
+        public void InvertCorrecto2()
+        {
+            // Arrange
+            ListaDoble lista = new ListaDoble();
+            lista.AddLast(2);
+            
+            // Act
+            lista.Invert();
+
+            Assert.AreEqual(2, lista.cabeza.Valor);
+
+        }
         [TestMethod]
         [ExpectedException(typeof(NullReferenceException))]
         public void MergeSorted_Null()
@@ -46,6 +116,7 @@ namespace Tarea2
             listA.MergeSorted(listA, listB, SortDirection.Ascendente);
 
         }
+        [TestMethod]
         public void MergeSorted_CombineDosListasAscendente()
         {
             // Arrange
@@ -77,11 +148,48 @@ namespace Tarea2
 
 
             // Act
-            //var resultado = listaA.MergeSorted(listaA, listaB, SortDirection.Ascendente);
+            listaA.MergeSorted(listaA, listaB, SortDirection.Ascendente);
 
 
             // Assert
-            //Assert.AreEqual(resultado.GetMiddle(), listaC.GetMiddle());
+            Assert.AreEqual(listaA.cabeza.Valor, listaC.cabeza.Valor);
+
+        }
+        [TestMethod]
+        
+        public void MergeSorted_CombineDosListasAVaciaAscendente()
+        {
+            // Arrange
+            var listaA = new ListaDoble();
+
+            var listaB = new ListaDoble();
+            listaB.InsertInOrder(9);
+            listaB.InsertInOrder(40);
+            listaB.InsertInOrder(50);
+
+            // Act
+            listaA.MergeSorted(listaA, listaB, SortDirection.Descendente);
+
+            Assert.AreEqual(0,listaA.tamaño);
+           
+
+        }
+        [TestMethod]
+        public void MergeSorted_CombineDosListaBVaciaAscendente()
+        {
+            // Arrange
+            var listaA = new ListaDoble();
+            listaA.InsertInOrder(10);
+            listaA.InsertInOrder(15);
+            var listaB = new ListaDoble();
+            
+
+            // Act
+            listaA.MergeSorted(listaA, listaB, SortDirection.Ascendente);
+
+
+            // Assert
+            Assert.AreEqual(10, listaA.cabeza.Valor);
 
         }
 
@@ -109,13 +217,14 @@ namespace Tarea2
 
             listaC.Invert();
 
+            listaA.MergeSorted(listaA, listaB, SortDirection.Descendente);
 
 
 
 
             // Assert
-            //Assert.AreEqual(resultado.cabeza, listaC.cabeza);
+            Assert.AreEqual(15, listaA.GetMiddle());
         }
-
+        
     }
 }
